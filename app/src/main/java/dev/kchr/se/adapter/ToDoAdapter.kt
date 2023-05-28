@@ -24,7 +24,7 @@ class ToDoAdapter: RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
         var description: TextView
 
         init {
-            title = itemView.findViewById(R.id.title)
+            title = itemView.findViewById(R.id.todoTitleTV)
             title = itemView.findViewById(R.id.dueDate)
             title = itemView.findViewById(R.id.description)
         }
