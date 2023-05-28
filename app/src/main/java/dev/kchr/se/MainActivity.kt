@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import dev.kchr.se.databinding.ActivityMainBinding
-import dev.kchr.se.databinding.ActivitySplashScreenBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -19,12 +18,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.createbtn.setOnClickListener {
-            val intent = Intent(this, detailActivity::class.java)
+            val intent = Intent(this, DetailActivity::class.java)
             startActivity(intent)
         }
 
         binding.viewNotebtn.setOnClickListener {
-            val intent = Intent(this, todolistActivity::class.java)
+            val intent = Intent(this, ToDoListActivity::class.java)
             startActivity(intent)
         }
     }

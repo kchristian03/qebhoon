@@ -9,6 +9,7 @@ import dev.kchr.se.R
 
 class ToDoAdapter: RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToDoAdapter.ViewHolder {
+        return TODO("Provide the return value")
     }
 
     override fun onBindViewHolder(holder: ToDoAdapter.ViewHolder, position: Int) {
@@ -20,13 +21,13 @@ class ToDoAdapter: RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
     }
     inner  class  ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         var title: TextView
-        var duedate: TextView
+        var due: TextView
         var description: TextView
 
         init {
-            title = itemView.findViewById(R.id.title)
-            title = itemView.findViewById(R.id.dueDate)
-            title = itemView.findViewById(R.id.description)
+            title = itemView.findViewById(R.id.todoTitleTV)
+            due = itemView.findViewById(R.id.dueDate)
+            description = itemView.findViewById(R.id.description)
         }
     }
 }

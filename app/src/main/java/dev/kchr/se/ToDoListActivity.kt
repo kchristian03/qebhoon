@@ -2,12 +2,10 @@ package dev.kchr.se
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
 import dev.kchr.se.adapter.ToDoAdapter
-import dev.kchr.se.databinding.ActivityMainBinding
 import dev.kchr.se.databinding.ActivityTodolistBinding
 
-class todolistActivity : AppCompatActivity() {
+class ToDoListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTodolistBinding
     private lateinit var todoAdapter: ToDoAdapter
 

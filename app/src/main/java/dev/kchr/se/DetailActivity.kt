@@ -7,10 +7,9 @@ import android.os.Bundle
 import android.widget.DatePicker
 import android.widget.TimePicker
 import dev.kchr.se.databinding.ActivityDetailBinding
-import dev.kchr.se.databinding.ActivityMainBinding
 import java.util.Calendar
 
-class detailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+class DetailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
     private lateinit var binding: ActivityDetailBinding
     var day = 0
@@ -44,7 +43,6 @@ class detailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
     private fun pickDate() {
         binding.dateTimebtn.setOnClickListener {
             getDateTimeCalendar()
-
             DatePickerDialog(this, this, year, month, day).show()
         }
     }
@@ -53,16 +51,13 @@ class detailActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
         savedDay = dayOfMonth
         savedMonth = month
         savedYear = year
-
         getDateTimeCalendar()
-
         TimePickerDialog(this, this, hour, minute, true).show()
     }
 
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
         savedHour = hourOfDay
         savedMinute = minute
-
         binding.tvTextTime.text = "$savedDay/$savedMonth/$savedYear $savedHour:$savedMinute"
     }
 }

@@ -1,13 +1,11 @@
 package dev.kchr.se.model
 
-import java.sql.Time
-
-data class Data(
+data class DataNote(
     val ID: Int,
     val CreatedAt: String,
     val UpdatedAt: String,
-    val DeletedAt: Any,
+    val DeletedAt: String?,
     val Title: String,
     val Description: String,
-    val Due: String,
+    val Due: Any,
 )
