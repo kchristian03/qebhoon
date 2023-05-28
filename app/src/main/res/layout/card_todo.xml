@@ -87,7 +87,7 @@
                     android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/todoTitleTV"
                     app:layout_constraintStart_toEndOf="@+id/todoTitleTV"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/todoTitleTV"
                     app:srcCompat="@drawable/baseline_delete_24" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
