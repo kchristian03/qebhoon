@@ -106,6 +106,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#568203"
+        android:fontFamily="@font/spectral_bold"
         android:text="Due"
         android:textColorHighlight="#568203"
         android:textColorLink="#568203"
