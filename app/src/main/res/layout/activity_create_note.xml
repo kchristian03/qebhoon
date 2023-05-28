@@ -40,10 +40,9 @@
     <EditText
         android:id="@+id/createnoteContent"
         android:layout_width="0dp"
-        android:layout_height="480dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="100dp"
         android:background="@null"
-        android:fontFamily="@font/spectral_bold"
         android:gravity="top|left"
         android:hint="Enter Note Content Here"
         android:inputType="textMultiLine|textImeMultiLine"
@@ -56,8 +55,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
         app:layout_constraintStart_toStartOf="@+id/createnoteTitle"
-        app:layout_constraintTop_toBottomOf="@+id/createNoteDue"
-        tools:ignore="UnknownId" />
+        app:layout_constraintTop_toBottomOf="@+id/createNoteDue" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/deletenoteFAB"

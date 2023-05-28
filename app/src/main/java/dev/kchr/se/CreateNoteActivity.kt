@@ -19,6 +19,8 @@ import dev.kchr.se.model.CreateNoteResponse
 import dev.kchr.se.model.Data
 import dev.kchr.se.model.DeleteNoteResponse
 import dev.kchr.se.model.EditNoteResponse
+import java.text.ParseException
+import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.*
 
@@ -204,8 +206,27 @@ class CreateNoteActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListen
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
         savedHour = hourOfDay
         savedMinute = minute
-        dueSave = "$savedYear-$savedMonth-$savedDay" + "$savedHour:$savedMinute:00"
+        dueSave = "$savedYear-$savedMonth-$savedDay" + "T$savedHour:$savedMinute:00Z"
         showToast(dueSave)
         dueView = "$savedDay/$savedMonth/$savedYear $savedHour:$savedMinute"
+        binding.createNoteDue.setText(dateFormat(dueSave))
+    }
+
+    fun dateFormat(dateReal: String): String {
+        val originalDateTime = dateReal
+        val newDateTimeFormat = "dd MMMM yyyy | HH:mm"
+
+        val originalFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+        val targetFormat = SimpleDateFormat(newDateTimeFormat, Locale.getDefault())
+
+        try {
+            val date: Date = originalFormat.parse(originalDateTime)
+            val formattedDateTime: String = targetFormat.format(date)
+            return formattedDateTime
+//                println(formattedDateTime)
+        } catch (e: ParseException) {
+            e.printStackTrace()
+            return null.toString()
+        }
     }
 }
