@@ -65,6 +65,7 @@
                     android:fontFamily="@font/advent_pro_thin"
                     android:text="duedate"
                     android:textAlignment="viewStart"
+                    android:textColor="#fff"
                     app:layout_constraintEnd_toEndOf="@+id/todoTitleTV"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/todoTitleTV"

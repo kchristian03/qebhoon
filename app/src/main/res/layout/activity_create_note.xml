@@ -112,6 +112,7 @@
         android:textColorLink="#568203"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
         app:layout_constraintStart_toStartOf="@+id/createnoteTitle"
-        app:layout_constraintTop_toBottomOf="@+id/createnoteTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/createnoteTitle"
+        app:rippleColor="#2196F3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
