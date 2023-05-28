@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F8F8"
     tools:context=".CreateNoteActivity">
 
 
     <EditText
         android:id="@+id/createnoteTitle"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_width="342dp"
+        android:layout_height="64dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="36dp"
         android:background="@null"
+        android:fontFamily="@font/spectral_bold"
         android:gravity="center_vertical"
         android:hint="Enter Note Title Here"
         android:lineHeight="48dp"
@@ -34,9 +36,10 @@
     <EditText
         android:id="@+id/createnoteContent"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="36dp"
+        android:layout_height="480dp"
+        android:layout_marginBottom="100dp"
         android:background="@null"
+        android:fontFamily="@font/spectral_bold"
         android:gravity="top|left"
         android:hint="Enter Note Content Here"
         android:inputType="textMultiLine|textImeMultiLine"
@@ -46,7 +49,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
         app:layout_constraintStart_toStartOf="@+id/createnoteTitle"
-        app:layout_constraintTop_toBottomOf="@+id/createNoteDue" />
+        app:layout_constraintTop_toBottomOf="@+id/createNoteDue"
+        tools:ignore="UnknownId" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/deletenoteFAB"
@@ -93,6 +97,7 @@
         app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="#568203"
         app:srcCompat="@android:drawable/ic_menu_save"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -100,7 +105,11 @@
         android:id="@+id/createNoteDue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#568203"
+        android:fontFamily="@font/spectral_bold"
         android:text="Due"
+        android:textColorHighlight="#568203"
+        android:textColorLink="#568203"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
         app:layout_constraintStart_toStartOf="@+id/createnoteTitle"
         app:layout_constraintTop_toBottomOf="@+id/createnoteTitle" />
