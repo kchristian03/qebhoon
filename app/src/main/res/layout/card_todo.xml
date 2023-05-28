@@ -18,7 +18,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="10dp"
-            android:backgroundTint="#568203"
+            android:backgroundTint="#E38C44"
             app:cardBackgroundColor="#568203"
             app:cardCornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -29,6 +29,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#E28B44"
                 android:orientation="vertical">
 
                 <TextView
@@ -36,9 +37,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:fontFamily="@font/spectral_bold"
+                    android:fontFamily="@font/amiri_bold"
                     android:padding="10dp"
-                    android:text="TextView"
+                    android:text="Title"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -56,6 +57,7 @@
                     android:text="TextView"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
