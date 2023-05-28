@@ -1,59 +1,33 @@
 package dev.kchr.se.adapter
 
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
-import dev.kchr.se.CardListener
 import dev.kchr.se.R
-import dev.kchr.se.databinding.CardTodoBinding
-import dev.kchr.se.model.Data
 
-
-class ToDoAdapter(private val listToDo: Array<Data>, val cardListener: CardListener) :
-    RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
-
-    val initialToDoDataList = ArrayList<Data>().apply {
-        listToDo?.let { addAll(it) }
+class ToDoAdapter: RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToDoAdapter.ViewHolder {
     }
 
-    class ViewHolder(val itemview: View, val cardListener1: CardListener) : RecyclerView.ViewHolder(itemview) {
-        val binding = CardTodoBinding.bind(itemview)
+    override fun onBindViewHolder(holder: ToDoAdapter.ViewHolder, position: Int) {
+        TODO("Not yet implemented")
+    }
 
-        fun setData(data: Data) {
-            binding.todoTitleTV.text = data.Title
-            binding.description.text = data.Description
-            binding.dueDate.text = data.DueDate
+    override fun getItemCount(): Int {
+        TODO("Not yet implemented")
+    }
+    inner  class  ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+        var title: TextView
+        var duedate: TextView
+        var description: TextView
 
-            itemview.setOnClickListener {
-                cardListener1.onCardClick(adapterPosition, data.ID)
-            }
+        init {
+            title = itemView.findViewById(R.id.title)
+            title = itemView.findViewById(R.id.dueDate)
+            title = itemView.findViewById(R.id.description)
         }
     }
-
-    // Create new views (invoked by the layout manager)
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // Create a new view, which defines the UI of the list item
-        val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.card_todo, parent, false)
-
-        return ViewHolder(view, cardListener)
-    }
-
-    // Replace the contents of a view (invoked by the layout manager)
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        // Get element from your dataset at this position and replace the
-        // contents of the view with that element
-        holder.setData(listToDo[position])
-    }
-
-    // Return the size of your dataset (invoked by the layout manager)
-    override fun getItemCount(): Int {
-        return listToDo.size
-    }
-
 }
-
 
