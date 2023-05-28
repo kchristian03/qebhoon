@@ -4,9 +4,6 @@ import android.provider.ContactsContract.Data
 import dev.kchr.se.CardListener
 import dev.kchr.se.R
 import dev.kchr.se.databinding.CardTodoBinding
-
-package com.uc.vpfinalproject.adapter
-
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
