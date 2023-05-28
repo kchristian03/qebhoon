@@ -7,14 +7,13 @@ import (
 	_ "errors"
 	_ "github.com/gofiber/fiber/v2"
 	"gorm.io/gorm"
-	"time"
 )
 
 type Note struct {
 	gorm.Model
-	Title       string `gorm:"not null"`
-	Description string `gorm:"not null"`
-	Due         time.Time
+	Title       string `gorm:""`
+	Description string `gorm:""`
+	Due         string `gorm:""`
 }
 
 func (n Note) CreateNote() (Note, error) {

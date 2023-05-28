@@ -6,13 +6,12 @@ import (
 	"ZenZen_API/framework/utils"
 	"encoding/json"
 	"github.com/gofiber/fiber/v2"
-	"time"
 )
 
 type EditNote struct {
-	Title       string    `json:"title"`
-	Description string    `json:"description"`
-	Due         time.Time `json:"due"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Due         string `json:"due"`
 }
 
 // EditNoteHandler

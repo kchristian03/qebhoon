@@ -7,14 +7,13 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation"
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm"
-	"time"
 )
 
 type CreateNote struct {
 	gorm.Model
-	Title       string    `json:"title"`
-	Description string    `json:"description"`
-	Due         time.Time `json:"due"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Due         string `json:"due"`
 }
 
 // CreateNoteHandler

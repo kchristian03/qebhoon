@@ -13,9 +13,9 @@ import (
 func ShowNoteHandler(c *fiber.Ctx) error {
 
 	var notes []models.Note
-	userID := models.User{}.LoggedInUser(c).ID
+	//userID := models.User{}.LoggedInUser(c).ID
 
-	app.DB.Where("user_id = ?", userID).Find(&notes)
+	app.DB.Find(&notes)
 
 	return c.Status(fiber.StatusOK).JSON(utils.HttpResponse{
 		Success: true,
