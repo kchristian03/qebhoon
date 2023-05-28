@@ -14,6 +14,6 @@ data class CreateNoteResponse(
         @SerializedName("DeletedAt") val DeletedAt: String?,
         @SerializedName("Title") val Title: String,
         @SerializedName("Description") val Description: String,
-        @SerializedName("Due") val Due: Any,
+        @SerializedName("Due") val Due: String,
     )
 }

@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.createbtn.setOnClickListener {
-            val intent = Intent(this, DetailActivity::class.java)
+            val intent = Intent(this, CreateNoteActivity::class.java)
             startActivity(intent)
         }
 

@@ -7,5 +7,5 @@ data class DataNote(
     val DeletedAt: String?,
     val Title: String,
     val Description: String,
-    val Due: Any,
+    val Due: String,
 )
