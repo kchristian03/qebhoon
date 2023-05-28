@@ -110,14 +110,16 @@
         android:id="@+id/createNoteDue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#568203"
+        android:backgroundTint="#00000000"
         android:fontFamily="@font/spectral_bold"
+        android:paddingLeft="12dp"
         android:text="Choose the Due Date"
-        android:textColorHighlight="#568203"
-        android:textColorLink="#568203"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#000000"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
         app:layout_constraintStart_toStartOf="@+id/createnoteTitle"
-        app:layout_constraintTop_toBottomOf="@+id/createnoteTitle"
-        app:rippleColor="#2196F3" />
+        app:layout_constraintTop_toBottomOf="@+id/createnoteTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
