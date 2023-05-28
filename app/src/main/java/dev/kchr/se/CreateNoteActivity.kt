@@ -182,7 +182,7 @@ class CreateNoteActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListen
     private fun display(note: Data) {
         binding.createnoteTitle.setText(note.Title)
         binding.createnoteContent.setText(note.Description)
-        binding.createNoteDue.setText(note.Due)
+        binding.createNoteDue.setText(dateFormat(note.Due))
 
     }
 
