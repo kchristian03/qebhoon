@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F8F8"
     tools:context=".CreateNoteActivity">
 
 
@@ -48,7 +49,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
         app:layout_constraintStart_toStartOf="@+id/createnoteTitle"
-        app:layout_constraintTop_toBottomOf="@+id/createNoteDue" />
+        app:layout_constraintTop_toBottomOf="@+id/createNoteDue"
+        tools:ignore="UnknownId" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/deletenoteFAB"
@@ -100,19 +102,15 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/createNoteDue"
+        android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#568203"
         android:backgroundTint="#568203"
-        android:backgroundTintMode="add"
-        android:fontFamily="@font/spectral_bold"
-        android:text="Due"
+        android:text="Button"
         android:textColorHighlight="#568203"
         android:textColorLink="#568203"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
         app:layout_constraintStart_toStartOf="@+id/createnoteTitle"
-        app:layout_constraintTop_toBottomOf="@+id/createnoteTitle"
-        app:rippleColor="#568203" />
+        app:layout_constraintTop_toBottomOf="@+id/createnoteTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
