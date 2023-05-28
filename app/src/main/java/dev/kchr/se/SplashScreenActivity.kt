@@ -4,6 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+//import com.google.android.gms.common.GoogleApiAvailability
+//import com.google.android.gms.common.GooglePlayServicesNotAvailableException
+//import com.google.android.gms.common.GooglePlayServicesRepairableException
+//import com.google.android.gms.security.ProviderInstaller
 import dev.kchr.se.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -20,6 +24,16 @@ class SplashScreenActivity : AppCompatActivity() {
 
         // Menyembunyikan ActionBar
         supportActionBar?.hide()
+
+//        try {
+//            ProviderInstaller.installIfNeeded(this)
+//        } catch (e: GooglePlayServicesRepairableException) {
+//            // Prompt the user to install/update/enable Google Play services.
+//            GoogleApiAvailability.getInstance()
+//                .showErrorNotification(this, e.connectionStatusCode)
+//        } catch (e: GooglePlayServicesNotAvailableException) {
+//            // Indicates a non-recoverable error: let the user know.
+//        }
 
         // Mengatur penundaan 3 detik sebelum berpindah ke MainActivity
         Handler().postDelayed({
