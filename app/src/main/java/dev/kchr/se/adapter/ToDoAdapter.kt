@@ -11,6 +11,8 @@ import dev.kchr.se.CardListener
 import dev.kchr.se.R
 import dev.kchr.se.databinding.CardTodoBinding
 import dev.kchr.se.model.Data
+import java.text.ParseException
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -20,16 +22,28 @@ class ToDoAdapter(val listNote: ArrayList<Data>, val cardListener: CardListener)
     class viewHolder (val itemview: View, val cardListener1: CardListener): RecyclerView.ViewHolder(itemview){
 
         val binding = CardTodoBinding.bind(itemview)
+        fun dateFormat(dateReal: String): String {
+            val originalDateTime = dateReal
+            val newDateTimeFormat = "dd MMMM yyyy\nHH:mm"
 
-        fun setData(data: Data){
-            binding.todoTitleTV.text = data.Title
+            val originalFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+            val targetFormat = SimpleDateFormat(newDateTimeFormat, Locale.getDefault())
 
-            if (data.Description.length <= 40) {
-                binding.description.text = data.Description
-            } else {
-                binding.description.text = data.Description.substring(0, 40) + "    ..."
+            try {
+                val date: Date = originalFormat.parse(originalDateTime)
+                val formattedDateTime: String = targetFormat.format(date)
+                return formattedDateTime
+//                println(formattedDateTime)
+            } catch (e: ParseException) {
+                e.printStackTrace()
+                return null.toString()
             }
-            binding.dueDate.text = data.Due
+        }
+        fun setData(data: Data){
+            binding.noteJudulTV.text = data.Title
+
+            binding.noteIsiTV.text = data.Due
+            binding.noteIsiTV.text = dateFormat(data.Due)
 
             itemview.setOnClickListener{
                 cardListener1.onCardClick(adapterPosition, data.ID)
