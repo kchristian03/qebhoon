@@ -36,8 +36,8 @@
     <EditText
         android:id="@+id/createnoteContent"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="36dp"
+        android:layout_height="480dp"
+        android:layout_marginBottom="100dp"
         android:background="@null"
         android:fontFamily="@font/spectral_bold"
         android:gravity="top|left"
@@ -102,11 +102,11 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/createNoteDue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#568203"
-        android:text="Button"
+        android:text="Due"
         android:textColorHighlight="#568203"
         android:textColorLink="#568203"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
