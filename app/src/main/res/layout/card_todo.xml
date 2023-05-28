@@ -45,7 +45,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/description"
+                    android:id="@+id/todoDescriptionTV"
                     android:layout_width="369dp"
                     android:layout_height="74dp"
                     android:layout_marginTop="16dp"
@@ -55,11 +55,11 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/imageView3"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/dueDate"
-                    app:layout_constraintTop_toBottomOf="@+id/dueDate" />
+                    app:layout_constraintStart_toStartOf="@+id/todoDueDateTV"
+                    app:layout_constraintTop_toBottomOf="@+id/todoDueDateTV" />
 
                 <TextView
-                    android:id="@+id/dueDate"
+                    android:id="@+id/todoDueDateTV"
                     android:layout_width="343dp"
                     android:layout_height="22dp"
                     android:layout_marginTop="16dp"
