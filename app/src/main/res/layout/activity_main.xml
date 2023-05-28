@@ -30,12 +30,12 @@
         android:textColorHighlight="#E38C44"
         android:textColorLink="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/viewNotebtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/viewNotebtn"
         android:layout_width="343dp"
         android:layout_height="68dp"
         android:layout_marginBottom="96dp"
@@ -58,6 +58,6 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/viewNotebtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

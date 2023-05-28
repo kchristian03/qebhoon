@@ -22,5 +22,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, detailActivity::class.java)
             startActivity(intent)
         }
+
+        binding.viewNotebtn.setOnClickListener {
+            val intent = Intent(this, todolistActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
