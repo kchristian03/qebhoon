@@ -71,11 +71,13 @@
 
     <Button
         android:id="@+id/dateTimebtn"
-        android:layout_width="wrap_content"
+        android:layout_width="318dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:text="Button"
+        android:backgroundTint="#689268"
+        android:text="date and time picker"
+        android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
@@ -84,6 +86,7 @@
         android:id="@+id/button"
         android:layout_width="148dp"
         android:layout_height="60dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#607d3b"
         android:fontFamily="@font/spectral_bold"
         android:hint="Save"
