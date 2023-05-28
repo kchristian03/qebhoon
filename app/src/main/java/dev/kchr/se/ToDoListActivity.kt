@@ -1,10 +1,12 @@
 package dev.kchr.se
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import dev.kchr.se.adapter.ToDoAdapter
 import dev.kchr.se.controller.NoteController
@@ -33,9 +35,7 @@ class ToDoListActivity : AppCompatActivity(), CardListener {
         binding.toolbarNote.setNavigationOnClickListener {
             onBackPressed()
         }
-//
-        val controller = NoteController()
-//
+        val controller by viewModels<NoteController>()
         init(controller)
 
     }
@@ -87,7 +87,6 @@ class ToDoListActivity : AppCompatActivity(), CardListener {
             GlobalVar.listNote.addAll(data.data)
         }
         display()
-
     }
 
     private fun stopLoading() {
@@ -100,8 +99,15 @@ class ToDoListActivity : AppCompatActivity(), CardListener {
 
     override fun onDestroy() {
         super.onDestroy()
-//        _binding = null
+//        binding = null
     }
+
+    @SuppressLint("NotifyDataSetChanged")
+    override fun onResume() {
+        super.onResume()
+        ToDoAdapter(GlobalVar.listNote, this).notifyDataSetChanged()
+    }
+
     override fun onCardClick(position: Int, id: Int) {
         val myIntent = Intent(this, CreateNoteActivity::class.java).apply {
             putExtra("position", position); putExtra("id", id)

@@ -2,7 +2,7 @@ package dev.kchr.se.helper
 
 object Const {
     const val BASE_URL_LOCALHOST = "http://192.168.42.19:8080/"
-    const val BASE_URL = "https://157.245.194.248:8080/"
+    const val BASE_URL = "http://157.245.194.248:8080/"
     const val PING_URL = "api/hello/"
 
     //note

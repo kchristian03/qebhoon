@@ -204,7 +204,8 @@ class CreateNoteActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListen
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
         savedHour = hourOfDay
         savedMinute = minute
-        dueSave = "$savedYear-$savedMonth-$savedDay" + "T$savedHour:$savedMinute+07:00"
+        dueSave = "$savedYear-$savedMonth-$savedDay" + "T$savedHour:$savedMinute:00"
+        showToast(dueSave)
         dueView = "$savedDay/$savedMonth/$savedYear $savedHour:$savedMinute"
     }
 }
