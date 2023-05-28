@@ -24,8 +24,8 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="291dp">
+                android:layout_width="437dp"
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/todoTitleTV"
@@ -50,7 +50,7 @@
                     android:layout_width="390dp"
                     android:layout_height="80dp"
                     android:layout_marginTop="12dp"
-                    android:fontFamily="@font/amiri"
+                    android:fontFamily="@font/spectral_bold"
                     android:text="description"
                     app:layout_constraintEnd_toEndOf="@+id/todoTitleTV"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -62,7 +62,7 @@
                     android:layout_width="343dp"
                     android:layout_height="22dp"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/advent_pro_thin"
+                    android:fontFamily="@font/spectral_bold"
                     android:text="duedate"
                     android:textAlignment="viewStart"
                     app:layout_constraintEnd_toEndOf="@+id/todoTitleTV"
@@ -74,21 +74,12 @@
                     android:id="@+id/Edit"
                     android:layout_width="26dp"
                     android:layout_height="27dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/Delete"
-                    app:layout_constraintStart_toEndOf="@+id/Delete"
-                    app:layout_constraintTop_toTopOf="@+id/Delete"
-                    app:srcCompat="@drawable/baseline_create_24" />
-
-                <ImageView
-                    android:id="@+id/Delete"
-                    android:layout_width="30dp"
-                    android:layout_height="27dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="52dp"
                     app:layout_constraintBottom_toBottomOf="@+id/todoTitleTV"
                     app:layout_constraintStart_toEndOf="@+id/todoTitleTV"
                     app:layout_constraintTop_toTopOf="@+id/todoTitleTV"
-                    app:srcCompat="@drawable/baseline_delete_24" />
+                    app:layout_constraintVertical_bias="0.38"
+                    app:srcCompat="@drawable/baseline_create_24" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
