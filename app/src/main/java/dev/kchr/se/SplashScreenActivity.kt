@@ -11,11 +11,17 @@ class SplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding =ActivitySplashScreenBinding.inflate(layoutInflater)
+
+        // Menggunakan ActivitySplashScreenBinding untuk menghubungkan tampilan layout dengan activity
+        binding = ActivitySplashScreenBinding.inflate(layoutInflater)
+
+        // Menetapkan tampilan root dari layout yang dihubungkan ke setContentView
         setContentView(binding.root)
 
+        // Menyembunyikan ActionBar
         supportActionBar?.hide()
 
+        // Mengatur penundaan 3 detik sebelum berpindah ke MainActivity
         Handler().postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
