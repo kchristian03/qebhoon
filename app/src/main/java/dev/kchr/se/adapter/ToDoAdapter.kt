@@ -1,4 +1,5 @@
 package dev.kchr.se.adapter
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,41 +9,42 @@ import dev.kchr.se.R
 
 class ToDoAdapter {
 
-    // Mendefinisikan adapter kustom yang akan digunakan untuk RecyclerView
     class CustomAdapter(private val dataSet: Array<String>) :
-        RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+            RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
-        // Mendefinisikan ViewHolder kustom untuk menangani tampilan setiap item dalam RecyclerView
+        /**
+         * Provide a reference to the type of views that you are using
+         * (custom ViewHolder).
+         */
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val textView: TextView
 
             init {
-                // Menginisialisasi komponen TextView dari tampilan item
+                // Define click listener for the ViewHolder's View.
                 textView = view.findViewById(R.id.textView)
             }
         }
 
-        // Membuat tampilan baru untuk setiap item dalam RecyclerView
+        // Create new views (invoked by the layout manager)
         override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-            // Membuat tampilan baru berdasarkan layout XML menggunakan LayoutInflater
+            // Create a new view, which defines the UI of the list item
             val view = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.text_row_item, viewGroup, false)
+                    .inflate(R.layout.text_row_item, viewGroup, false)
 
-            // Mengembalikan ViewHolder dengan tampilan baru yang telah dibuat
             return ViewHolder(view)
         }
 
-        // Mengganti isi tampilan pada setiap item dengan data dari dataSet
+        // Replace the contents of a view (invoked by the layout manager)
         override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-            // Mengambil elemen data dari dataSet berdasarkan posisi dan mengganti isi TextView dengan elemen tersebut
+
+            // Get element from your dataset at this position and replace the
+            // contents of the view with that element
             viewHolder.textView.text = dataSet[position]
         }
 
-        // Mengembalikan jumlah item dalam dataSet
+        // Return the size of your dataset (invoked by the layout manager)
         override fun getItemCount() = dataSet.size
 
     }
-}
-
 
 }
