@@ -23,8 +23,8 @@ class ToDoAdapter(private val listToDo: Array<Data>, val cardListener: CardListe
 
         fun setData(data: Data) {
             binding.todoTitleTV.text = data.Title
-            binding.todoDescriptionTV.text = data.Description
-            binding.todoDueDateTV.text = data.DueDate
+            binding.description.text = data.Description
+            binding.dueDate.text = data.DueDate
 
             itemview.setOnClickListener {
                 cardListener1.onCardClick(adapterPosition, data.ID)

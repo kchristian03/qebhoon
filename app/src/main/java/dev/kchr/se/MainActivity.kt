@@ -1,5 +1,6 @@
 package dev.kchr.se
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import dev.kchr.se.databinding.ActivityMainBinding
@@ -16,5 +17,10 @@ class MainActivity : AppCompatActivity() {
 
         // Menetapkan tampilan root dari layout yang dihubungkan ke setContentView
         setContentView(binding.root)
+
+        binding.createbtn.setOnClickListener {
+            val intent = Intent(this, detailActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

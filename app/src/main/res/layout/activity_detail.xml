@@ -69,35 +69,21 @@
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
-        android:layout_width="317dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:background="#689268"
-        android:textColorHint="@color/white"
+    <Button
+        android:id="@+id/dateTimebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:text="Button"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
         app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#689268"
-            android:backgroundTint="#689268"
-            android:fontFamily="@font/spectral_bold"
-            android:hint="datetime"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textColorLink="@color/white"
-            android:textSize="14sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="148dp"
         android:layout_height="60dp"
-        android:layout_marginTop="48dp"
         android:backgroundTint="#607d3b"
         android:fontFamily="@font/spectral_bold"
         android:hint="Save"
@@ -105,7 +91,18 @@
         android:textColorHighlight="#607d3b"
         android:textColorLink="#607d3b"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimebtn" />
+
+    <TextView
+        android:id="@+id/tv_textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

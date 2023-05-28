@@ -13,14 +13,14 @@
         android:layout_height="259dp"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/createbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/qebhoon" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/createbtn"
         android:layout_width="337dp"
         android:layout_height="69dp"
         android:layout_marginBottom="24dp"
