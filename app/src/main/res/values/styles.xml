@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
-        <item name="android:titleTextAppearance">@style/ToolbarTitleTextAppearance</item>
-        <item name="android:subtitleTextAppearance">@style/ToolbarSubtitleTextAppearance</item>
+<!--        <item name="android:titleTextAppearance">@style/ToolbarTitleTextAppearance</item>-->
+<!--        <item name="android:subtitleTextAppearance">@style/ToolbarSubtitleTextAppearance</item>-->
     </style>
 
-    <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="fontFamily">@font/spectral_bold</item>
-    </style>
+<!--    <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">-->
+<!--        <item name="fontFamily">@font/spectral_bold</item>-->
+<!--    </style>-->
 
-    <style name="ToolbarSubtitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
-        <item name="fontFamily">@font/spectral_bold</item>
-    </style>
+<!--    <style name="ToolbarSubtitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">-->
+<!--        <item name="fontFamily">@font/spectral_bold</item>-->
+<!--    </style>-->
 </resources>
