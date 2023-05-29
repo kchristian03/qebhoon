@@ -140,7 +140,7 @@ class CreateNoteActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListen
         binding.createNoteFAB.setOnClickListener() {
             val title = binding.createnoteTitle.text.toString().trim()
             val content = binding.createnoteContent.text.toString().trim()
-            val due = dueSave.toString().trim()
+            val due = binding.createNoteDue.text.toString().trim()
             binding.progressBarcreatenote.visibility = View.VISIBLE
             if (position != -1) {
                 //yang ini edit data note
@@ -183,7 +183,7 @@ class CreateNoteActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListen
         binding.createnoteTitle.setText(note.Title)
         binding.createnoteContent.setText(note.Description)
         binding.createNoteDue.setText(dateFormat(note.Due))
-
+        dueSave = note.Due
     }
 
     private fun getDateTimeCalendar() {
