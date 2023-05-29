@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:backgroundTint="#ffffff"
     tools:context=".CreateNoteActivity">
 
 
@@ -14,10 +12,9 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="36dp"
         android:background="@null"
-        android:fontFamily="@font/spectral_bold"
         android:gravity="center_vertical"
         android:hint="Enter Note Title Here"
         android:lineHeight="48dp"
@@ -28,55 +25,29 @@
         android:minHeight="48dp"
         android:minLines="1"
         android:padding="12dp"
-        android:textColor="@color/material_dynamic_neutral0"
-        android:textColorHighlight="@color/material_dynamic_neutral80"
-        android:textColorHint="@color/material_dynamic_neutral60"
-        android:textColorLink="@color/material_dynamic_neutral0"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/createnoteContent"
-        android:layout_width="337dp"
-        android:layout_height="506dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@null"
         android:gravity="top|left"
         android:hint="Enter Note Content Here"
         android:inputType="textMultiLine|textImeMultiLine"
         android:padding="12dp"
         android:singleLine="true"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/material_dynamic_neutral80"
-        android:textColorHint="@color/material_dynamic_neutral60"
-        android:textColorLink="@color/black"
         android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/deletenoteFAB"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
         app:layout_constraintStart_toStartOf="@+id/createnoteTitle"
         app:layout_constraintTop_toBottomOf="@+id/createNoteDue" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/createNoteFAB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="30dp"
-        android:background="#568203"
-        android:backgroundTint="#FFFFFF"
-        android:clickable="true"
-        app:backgroundTint="#568203"
-        app:layout_constraintBottom_toBottomOf="@+id/progressBarcreatenote"
-        app:layout_constraintEnd_toEndOf="@+id/createnoteContent"
-        app:layout_constraintTop_toTopOf="@+id/progressBarcreatenote"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/baseline_save_24"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/deletenoteFAB"
@@ -84,15 +55,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:background="#568203"
-        android:backgroundTint="#FFFFFF"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
         android:clickable="true"
-        app:backgroundTint="#568203"
-        app:layout_constraintBottom_toBottomOf="@+id/progressBarcreatenote"
-        app:layout_constraintStart_toStartOf="@+id/createnoteContent"
-        app:layout_constraintTop_toTopOf="@+id/progressBarcreatenote"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_delete"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ProgressBar
@@ -102,25 +70,34 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:indeterminateTint="#000000"
+        android:layout_marginBottom="30dp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createnoteContent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createNoteFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/createNoteDue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#568203"
+        android:layout_marginTop="8dp"
         android:text="Choose Due Date"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/createnoteTitle"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/createnoteTitle"
         app:layout_constraintTop_toBottomOf="@+id/createnoteTitle" />
 
