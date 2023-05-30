@@ -50,7 +50,7 @@ class CreateNoteActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListen
         super.onCreate(savedInstanceState)
         binding = ActivityCreateNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.hide()
+
         @Suppress("DEPRECATION") window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
@@ -142,6 +142,8 @@ class CreateNoteActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListen
             val content = binding.createnoteContent.text.toString().trim()
             val due = dueSave.toString().trim()
             binding.progressBarcreatenote.visibility = View.VISIBLE
+
+            // If Else Condition untuk membedakan edit dan create note
             if (position != -1) {
                 //yang ini edit data note
                 val id = id
