@@ -9,9 +9,6 @@ who write the code:
 
 Qebhoon merupakan aplikasi berbasis Kotlin dan menggunakan database go language. Aplikasi ini menjawab permasalahan para pekebun yang sering lupa untuk menyiram tanamannya atau lupa dosis pupuk/air nya berapa saja tiap tanaman. Aplikasi qebhoon ini memberikan fitur to-do-list khusus untuk tanaman, dilengkapi dengan fitur atur tanggal dan jam (plus menitannya), aplikasi ini bisa membantu mengingatkan pekebun dan mencatat jenis pupuk, dosis pupuk, bahkan jenis cangkok atau stek yang ingin diinput user bisa diinput di aplikasi ini.
 
-functional requirement:
-
-
 how to use:
 1. user klik aplikasi, dan user akan melihat splash screen +-3 detik
 2. user akan melihat 2 pilihan button, yaitu create note dan view available notes
