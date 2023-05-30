@@ -17,11 +17,13 @@ class MainActivity : AppCompatActivity() {
         // Menetapkan tampilan root dari layout yang dihubungkan ke setContentView
         setContentView(binding.root)
 
+        // Intent untuk mengarah ke page Create Note Page
         binding.createbtn.setOnClickListener {
             val intent = Intent(this, CreateNoteActivity::class.java)
             startActivity(intent)
         }
 
+        // Intent untuk mengarah ke page Read Note Page
         binding.viewNotebtn.setOnClickListener {
             val intent = Intent(this, ToDoListActivity::class.java)
             startActivity(intent)
